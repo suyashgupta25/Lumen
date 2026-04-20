@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"https://adoptium.net/temurin/releases/?version=21&os=windows&arch=x64&package=jdk\")"
+    ]
+  }
+}
