@@ -1,4 +1,4 @@
-# Lumen
+# Lumen (Work in progress)
 
 > On-device reading companion for Android. Summarizes articles, emails, and
 > PDFs using Gemini Nano through ML Kit GenAI, with a cloud fallback for
