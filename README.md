@@ -29,9 +29,9 @@ decision.
 ```
   Feature modules                        Core
   ┌───────────────────────┐        ┌───────────────────────────────┐
-  │  feature-summarize    │        │        core-ai                │
-  │  feature-rewrite      │◀──────▶│                               │
-  │  feature-history      │        │  SummarizationEngine          │
+  │  feature/summarize    │        │        core/ai                │
+  │  feature/rewrite      │◀──────▶│                               │
+  │  feature/history      │        │  SummarizationEngine          │
   └───────────────────────┘        │  (interface)                  │
                                    │                               │
                                    │  ┌─────────┐  ┌────────────┐  │
@@ -53,16 +53,16 @@ implementations exist. See the RFC for the selection policy.
 
 ### Module layout
 
-| Module                 | Purpose                                             |
-|------------------------|-----------------------------------------------------|
-| `app`                  | Hilt entry point, navigation, share-target intent   |
-| `core-ai`              | `SummarizationEngine` + the three implementations   |
-| `core-data`            | Room persistence (summary history)                  |
-| `core-design`          | Material3 theme wrapper                             |
-| `core-observability`   | `Telemetry` abstraction                             |
-| `feature-summarize`    | Summarize flow (ViewModel + Compose screen)         |
-| `feature-rewrite`      | *(Week 2)* Tone-shift flow                          |
-| `feature-history`      | *(Week 2)* Past summaries                           |
+| Module                  | Gradle path              | Purpose                                             |
+|-------------------------|--------------------------|-----------------------------------------------------|
+| `app`                   | `:app`                   | Hilt entry point, navigation, share-target intent   |
+| `core/ai`               | `:core:ai`               | `SummarizationEngine` + the three implementations   |
+| `core/data`             | `:core:data`             | Room persistence (summary history)                  |
+| `core/design`           | `:core:design`           | Material3 theme wrapper                             |
+| `core/observability`    | `:core:observability`    | `Telemetry` abstraction                             |
+| `feature/summarize`     | `:feature:summarize`     | Summarize flow (ViewModel + Compose screen)         |
+| `feature/rewrite`       | `:feature:rewrite`       | *(Week 2)* Tone-shift flow                          |
+| `feature/history`       | `:feature:history`       | *(Week 2)* Past summaries                           |
 
 ## On-device vs cloud: the tradeoff
 
